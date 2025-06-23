@@ -1,0 +1,171 @@
+.navbar-toggler {
+    border-color: rgba(215, 211, 195, 1); /* Change border color */
+}
+.navbar-toggler-icon {
+    background-color: rgba(215, 211, 195, 1); /* Change the button icon color */
+}
+body {
+    background: url(BG2.png);
+    background-size: cover;
+
+}
+/* Adjust spacing between nav items */
+.nav-item {
+    margin-right: 10px; /* Default space between items */
+}
+/* Apply margin only to items with the nav-spacing class */
+.nav-spacing {
+    margin-right: 13px; /* Adjust the distance as needed for specific items */
+}
+/* Adjust navbar text (username) styling */
+.navbar-text {
+    margin-left: 10px;  /* Adjust distance between username and previous item */
+    margin-right: 30px; /* Space between the username and logout */
+    font-size: 1.5rem;   /* Adjust the font size of username */
+}
+/* Make sure the logout button stays on the far right */
+.nav-item:last-child {
+    margin-right: -50px; /* Push logout item to the far right */
+}
+/* Optional: Adjust icon size in nav items */
+.nav-link i {
+    font-size: 1.5rem; /* Set default icon size */
+}
+/*babaguhin na tong part na to */
+/* Style for the container */
+.styled-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Add space inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    text-align: center; /* Center the text inside */
+    color: #624837; /* Match the navbar's brown theme */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+/* Spacing between search input and button */
+.search-bar input {
+    max-width: 100%; /* Adjust the width of the search bar */
+    height: 40px; /* Set a consistent height */
+}
+/* Style for the Search button */
+.btn-search {
+    background-color: #efa39b;
+    border-color: #efa39b;
+    color: white;
+    padding: 5px 20px; /* Adjust the padding to make the button larger or smaller */
+    font-size: 12px; /* Adjust the font size */
+    border-radius: 5px; /* Optional: for rounded corners */
+    margin-right: -7px;
+    width: 180px;
+}
+.btn-search:hover {
+    background-color:#F9B4A8; /* Lighter shade of the base color */
+    border-color: #F9B4A8;
+    color: white;
+}
+.custom-line {
+    border-top: 4px solid #ddc1b9; /* Set the line thickness and color */
+    margin: 20px 0; /* Add spacing above and below the line */
+    border-radius: 5px;
+}
+/*fetch data */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Reduced gap for both horizontal and vertical spacing */
+    justify-content: flex-start; /* Align items at the start of the container */
+    align-items: flex-start; /* Align items at the top of the container */
+}
+.product-item {
+    width: 290px;  /* Set a specific width for the product item */
+    height: 400px; /* Set a specific height for the product item */
+    padding: 10px;
+    border: 2px solid #ad9d92;
+    border-radius: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #FFF5F3;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left:12px;
+}
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-name {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #624837;
+}
+.product-price {
+    color: #ed8a86;
+    font-size: 1em;
+    margin-top: 5px;
+}
+.product-updated {
+    font-size: 0.9em;
+    color: gray;
+    margin-top: 5px;
+}
+.product-actions {
+    margin-top: 10px;
+}
+.update-btn, .delete-btn {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    background-color: #c1867e;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.update-btn:hover, .delete-btn:hover {
+    background-color: #c1a092;
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 calc(100% - 20px);
+    }
+}
+.message-box {
+    background-color: #968276; /* Default background color for success */
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px; /* Adjust bottom padding */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.message-box.error {
+    background-color: #ed8a86; /* Background color for errors */
+}
